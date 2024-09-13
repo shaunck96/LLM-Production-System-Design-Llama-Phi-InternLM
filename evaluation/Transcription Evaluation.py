@@ -162,8 +162,8 @@ def generate_report(merged_df, final_wer, final_cer, levenshtein_mean, levenshte
 
 today = datetime.now().date() - timedelta(days=14)
 today_str = today.strftime('%Y_%m_%d')
-base_dir = "/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/audio_files"
-dbfs_path = f"/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/audio_files/{today_str}"
+base_dir = "/audio_files"
+dbfs_path = f"/audio_files/{today_str}"
 
 file_names = [os.path.join(dbfs_path, f) for f in os.listdir(dbfs_path)]
 half_size = len(file_names) // 2
@@ -275,5 +275,5 @@ with open('transcription_metrics_report.html', 'r') as file:
 
 display(HTML(report_html))
 
-output_csv_path = '/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/CallVoltMasterRepo/RepeatCallers/evaluation/transcriptions/transcription_metrics_evaluation.csv'
+output_csv_path = '/transcriptions/transcription_metrics_evaluation.csv'
 merged_df.to_csv(output_csv_path)
