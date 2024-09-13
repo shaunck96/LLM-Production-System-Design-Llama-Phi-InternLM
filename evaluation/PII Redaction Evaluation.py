@@ -12,8 +12,8 @@ from jinja2 import Template
 
 def merger(anonymized_list):
     return " ".join([trans['text'] for trans in anonymized_list])
-transcriptions = pd.read_parquet(r"/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/Production_Code/transcriptions/gpu_transcriptions_2024_07_31.parquet")
-redacted = pd.read_parquet(r"/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/Production_Code/transcriptions/gpu_transcriptions_redacted_2024_07_31.parquet")
+transcriptions = pd.read_parquet(r"/transcriptions/gpu_transcriptions_2024_07_31.parquet")
+redacted = pd.read_parquet(r"/transcriptions/gpu_transcriptions_redacted_2024_07_31.parquet")
 
 
 transcriptions = pd.concat([transcriptions, redacted], axis=1)[['transcription', 'anonymized']]
@@ -234,4 +234,4 @@ with open("pii_redaction_summary.html", "w") as f:
 from IPython.core.display import display, HTML
 display(HTML(rendered_html))
 
-summary.to_csv(r'/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/CallVoltMasterRepo/RepeatCallers/evaluation/redaction/redaction_metrics_evaluation.csv')
+summary.to_csv(r'/evaluation/redaction/redaction_metrics_evaluation.csv')
