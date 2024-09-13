@@ -12,7 +12,7 @@ import pandas as pd
 from IPython.display import display, HTML
 from jinja2 import Template
 
-summaries = pd.read_parquet("/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/Production_Code/Deployment Code/call_sid_based/benchmarking_results/gpu_transcriptions_redacted_summary_benchmarking.parquet")
+summaries = pd.read_parquet("/call_sid_based/benchmarking_results/gpu_transcriptions_redacted_summary_benchmarking.parquet")
 
 model_path = "internlm/internlm2_5-7b-chat"
 model = AutoModelForCausalLM.from_pretrained(
