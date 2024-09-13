@@ -366,6 +366,3 @@ print(result)
 hf_model_repo = "<REPO PATH>"
 merged_model.push_to_hub(hf_model_repo)
 tokenizer.push_to_hub(hf_model_repo)
-
-# COMMAND ----------
-
