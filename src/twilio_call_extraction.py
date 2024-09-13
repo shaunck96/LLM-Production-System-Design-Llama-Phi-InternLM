@@ -578,7 +578,7 @@ class TwilioCallExtractor:
 
 if __name__ == "__main__":
     try:
-        extractor = TwilioCallExtractor("/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/CallVoltMasterRepo/RepeatCallers/credentials/audio_file_retrieval_credentials.json")
+        extractor = TwilioCallExtractor("/credentials/audio_file_retrieval_credentials.json")
         extractor.validate_config()
         metadata = extractor.run()
         print("Extraction completed successfully.")
