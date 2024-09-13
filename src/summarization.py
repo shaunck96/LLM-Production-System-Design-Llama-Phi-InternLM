@@ -320,7 +320,7 @@ def load_credentials(filepath: str) -> Dict[str, str]:
         creds = json.load(f)
     return creds
     
-creds = load_credentials("/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/CallVoltMasterRepo/RepeatCallers/credentials/summary.json")
+creds = load_credentials("/credentials/summary.json")
 file_path = creds['input_path']
 save_path = creds['output_path']
 
