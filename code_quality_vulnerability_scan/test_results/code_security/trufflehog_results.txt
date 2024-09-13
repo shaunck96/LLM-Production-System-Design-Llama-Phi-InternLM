@@ -1,0 +1,7 @@
+usage: trufflehog [-h] [--json] [--regex] [--rules RULES] [--allow ALLOW]
+                  [--entropy DO_ENTROPY] [--since_commit SINCE_COMMIT]
+                  [--max_depth MAX_DEPTH] [--branch BRANCH]
+                  [-i INCLUDE_PATHS_FILE] [-x EXCLUDE_PATHS_FILE]
+                  [--repo_path REPO_PATH] [--cleanup]
+                  git_url
+trufflehog: error: the following arguments are required: git_url
