@@ -15,7 +15,7 @@ import json
 def merger(anonymized_list):
     return " ".join([trans['text'] for trans in anonymized_list])
 
-transcriptions = pd.read_csv(r"/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/Production_Code/transcriptions/gpu_adv_ins_call_sid_based.csv")
+transcriptions = pd.read_csv(r"/transcriptions/gpu_adv_ins_call_sid_based.csv")
 transcriptions
 
 
@@ -314,5 +314,5 @@ with open(output_path, "w") as f:
 from IPython.core.display import display, HTML
 display(HTML(rendered_html))
 
-output_csv_path = '/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/CallVoltMasterRepo/RepeatCallers/evaluation/advanced_insights/advanced_insights_metrics_evaluation.csv'
+output_csv_path = '/evaluation/advanced_insights/advanced_insights_metrics_evaluation.csv'
 summary.to_csv(output_csv_path)
