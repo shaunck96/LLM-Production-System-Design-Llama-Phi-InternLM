@@ -137,7 +137,7 @@ class CallSidDataProcessor:
         final = sum_top_trans.rename(columns={'file': 'file_path'}).merge(data['metadata'], on=['file_path'], how='inner')
         final.drop(columns=['User_Response', 'Intent', 'Intent_Score', 'IVR_Question'], axis=1, inplace=True)
 
-        with open("/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/CallVoltMasterRepo/RepeatCallers/credentials/audio_file_retrieval_credentials.json", "r") as f:
+        with open("/credentials/audio_file_retrieval_credentials.json", "r") as f:
             bill_account_creds = json.load(f)
 
         master_data = pd.read_parquet(bill_account_creds['call_sid_list_path'])
@@ -210,7 +210,7 @@ def main():
     
     data = processor.read_data()
     processed_data = processor.process_data(data)
-    processed_data.to_parquet(r'/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/CallVoltMasterRepo/RepeatCallers/data/final_output/final_output.parquets')
+    processed_data.to_parquet(r'/data/final_output/final_output.parquets')
     final_spark_df = processor.convert_to_spark_df(processed_data)
 
     # Display the final Spark DataFrame
