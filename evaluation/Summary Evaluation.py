@@ -238,5 +238,5 @@ rendered_html = template.render(insights=insights)
 # Display the rendered HTML using IPython
 display(HTML(rendered_html))
 
-output_csv_path = '/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/CallVoltMasterRepo/RepeatCallers/evaluation/summarization/summarization_metrics_evaluation.csv'
+output_csv_path = '/summarization/summarization_metrics_evaluation.csv'
 summaries.to_csv(output_csv_path)
