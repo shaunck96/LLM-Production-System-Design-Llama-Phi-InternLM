@@ -69,7 +69,7 @@ class TwilioCallExtractor:
             config_path (str): The path to the configuration file.
         """
         self.config = self.load_config(config_path)
-        self.bill_creds = self.load_config("/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/CallVoltMasterRepo/RepeatCallers/credentials/bill_account_secrets.json")
+        self.bill_creds = self.load_config("/credentials/bill_account_secrets.json")
         self.setup_dates()
         self.setup_paths()
         self.setup_client()
