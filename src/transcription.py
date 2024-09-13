@@ -207,7 +207,7 @@ def load_credentials(filepath: str) -> Dict[str, str]:
 # Load models and credentials
 model_0, model_1 = load_models_on_gpu()
 
-creds = load_credentials("/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/CallVoltMasterRepo/RepeatCallers/credentials/transcription.json")
+creds = load_credentials("/credentials/transcription.json")
 
 input_path = creds['input_path']
 save_path = creds['output_path']
