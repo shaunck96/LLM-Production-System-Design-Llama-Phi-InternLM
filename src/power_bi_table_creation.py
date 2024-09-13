@@ -92,19 +92,19 @@ class CallSidDataProcessor:
         Returns:
             dict: Dictionary containing the loaded data.
         """
-        with open("/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/CallVoltMasterRepo/RepeatCallers/credentials/audio_file_retrieval_credentials.json", "r") as f:
+        with open("/credentials/audio_file_retrieval_credentials.json", "r") as f:
             metadata_creds = json.load(f)
 
         with open("/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/CallVoltMasterRepo/RepeatCallers/credentials/transcription.json", "r") as f:
             trans_creds = json.load(f)
 
-        with open("/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/CallVoltMasterRepo/RepeatCallers/credentials/summary.json", "r") as f:
+        with open("/credentials/summary.json", "r") as f:
             summary_creds = json.load(f)
 
-        with open("/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/CallVoltMasterRepo/RepeatCallers/credentials/topics.json", "r") as f:
+        with open("/credentials/topics.json", "r") as f:
             topic_creds = json.load(f)
 
-        with open("/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/CallVoltMasterRepo/RepeatCallers/credentials/advanced_insights.json", "r") as f:
+        with open("/credentials/advanced_insights.json", "r") as f:
             adv_insights = json.load(f)
 
         metadata = pd.read_csv(metadata_creds['metadata_output_path'])
