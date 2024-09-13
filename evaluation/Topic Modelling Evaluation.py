@@ -11,7 +11,7 @@ import ast
 from jinja2 import Template
 import json
 
-topics = pd.read_parquet(r"/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/Production_Code/transcriptions/gpu_transcriptions_redacted_topics_2024_07_31.parquet")
+topics = pd.read_parquet(r"/gpu_transcriptions_redacted_topics_2024_07_31.parquet")
 
 with open(r"/Workspace/Users/sshibu@pplweb.com/CS_PA_NLP/mp3_files/topics/topic_og.json", "r") as f:
     json_data = f.read()
@@ -236,5 +236,5 @@ with open(output_path, "w") as f:
 from IPython.core.display import display, HTML
 display(HTML(rendered_html))
 
-output_csv_path = '/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/CallVoltMasterRepo/RepeatCallers/evaluation/topic_modelling/topic_modelling_metrics_evaluation.csv'
+output_csv_path = '/evaluation/topic_modelling/topic_modelling_metrics_evaluation.csv'
 summary.to_csv(output_csv_path)
