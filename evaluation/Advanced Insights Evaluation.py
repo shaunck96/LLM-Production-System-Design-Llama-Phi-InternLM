@@ -306,7 +306,7 @@ rendered_html = template.render(
 )
 
 # Step 4: Save the rendered HTML to a file
-output_path = "/Workspace/Users/sshibu@pplweb.com/CS_PA_NLP/call_insights_summary.html"
+output_path = "call_insights_summary.html"
 with open(output_path, "w") as f:
     f.write(rendered_html)
 
