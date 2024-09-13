@@ -135,7 +135,7 @@ def main():
     # Configure Spark storage
     configure_spark_storage(spark, dpcore_storage_acct, dpcore_dbricks_id, dpcore_dbricks_pwd, ppl_tenant_id)
 
-    with open("/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/CallVoltMasterRepo/RepeatCallers/credentials/bill_account_secrets.json", "r") as f:
+    with open("/credentials/bill_account_secrets.json", "r") as f:
         creds = json.load(f)
 
     # Parameters
