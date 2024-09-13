@@ -349,7 +349,7 @@ def main():
 
     model_0, model_1 = load_models_on_gpu()
 
-    creds = load_credentials("/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/CallVoltMasterRepo/RepeatCallers/credentials/redact.json")
+    creds = load_credentials("/credentials/redact.json")
 
     transcriptions = pd.read_parquet(creds['input_path'])
     file_names = transcriptions['transcription'].tolist()
