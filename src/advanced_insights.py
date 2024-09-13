@@ -273,7 +273,7 @@ def run_adv(max_workers: int) -> pd.DataFrame:
     """
     try:
         model = load_model_on_gpu()
-        creds = load_credentials("/Workspace/Users/sshibu@pplweb.com/GPU_End_To_End_Code_Execution/CallVoltMasterRepo/RepeatCallers/credentials/advanced_insights.json")   
+        creds = load_credentials("/credentials/advanced_insights.json")   
 
         ip_path = creds['input_path']
         transcription = pd.read_parquet(ip_path)
